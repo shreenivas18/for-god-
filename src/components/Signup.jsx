@@ -9,7 +9,7 @@ const Signup = ({ onSignup }) => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [role, setRole] = useState('employee');
-  const [organizationId] = useState('TECHCORP_IN');
+  const [organizationId, setOrganizationId] = useState('');
 
   const handleSignup = (e) => {
     e.preventDefault();
@@ -106,7 +106,8 @@ const Signup = ({ onSignup }) => {
                 type="text"
                 id="organizationId"
                 value={organizationId}
-                readOnly
+                onChange={(e) => setOrganizationId(e.target.value)}
+                placeholder="Your Organization ID"
                 required
               />
             </div>

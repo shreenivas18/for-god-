@@ -4,6 +4,7 @@
   --primary-color: #4F46E5; /* Indigo-600 */
   --primary-hover: #4338CA; /* Indigo-700 */
   --background-dark: #111827; /* Gray-900 */
+  --surface-color: #1F2937; /* Gray-800 */
   --text-light: #F9FAFB;
   --text-muted: #9CA3AF; /* Gray-400 */
   --border-color: #374151; /* Gray-700 */
@@ -98,7 +99,8 @@
   color: #D1D5DB; /* Gray-300 */
 }
 
-.input-group input {
+.input-group input,
+.input-group select {
   width: 100%;
   padding: 0.75rem 1rem;
   background-color: var(--surface-color);
@@ -109,17 +111,20 @@
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
 }
 
-.input-group input:hover {
+.input-group input:hover,
+.input-group select:hover {
   border-color: var(--primary-hover);
   transform: scale(1.05);
 }
 
-.input-group input:focus {
+.input-group input:focus,
+.input-group select:focus {
   outline: none;
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
   transform: scale(1.05);
 }
+
 
 .signup-button {
   background-color: var(--primary-color);
